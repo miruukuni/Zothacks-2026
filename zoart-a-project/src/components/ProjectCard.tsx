@@ -16,6 +16,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </span>
           <span aria-hidden="true" className="text-xl text-slate-400 group-hover:text-blue-700">↗</span>
         </div>
+        <p className="mb-2 text-xs font-medium text-slate-500">{project.category || "Uncategorized"}</p>
         <h3 className="text-xl font-semibold tracking-tight text-slate-900 group-hover:text-blue-700">{project.title}</h3>
         <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{project.description}</p>
         <div className="mt-5 mb-6 flex flex-wrap gap-1.5">{project.tags.map((tag) => <TagBadge key={tag} tag={tag} />)}</div>

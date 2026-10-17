@@ -5,7 +5,13 @@ export type Project = {
   author: string;
   description: string;
   tags: string[];
+  /** Optional so existing listings without a category remain compatible. */
+  category?: string;
   membersCurrent: number;
   membersWanted: number;
   contactInfo: string;
+  githubUrl?: string;
+  websiteUrl?: string;
 };
+
+export type ProjectDraft = Omit<Project, "id">;
