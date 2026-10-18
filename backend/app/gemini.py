@@ -114,7 +114,7 @@ def call_gemini(user_query: str= Body(embed=True)):
     start = time.time()
     try:
         interaction = client.interactions.create(
-            model="gemini-3.8-flash",
+            model="gemini-3.5-flash-lite",
             input=[
                 {
                     "type": "text",

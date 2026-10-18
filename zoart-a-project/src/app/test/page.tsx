@@ -1,10 +1,10 @@
 "use client";
 
-import { supabase } from "../../lib/client";
+import { supabase } from "../../../lib/client";
 import { useState } from "react";
 import SearchBar from "@/components/SearchBar";
 import UploadProjectModal from "@/components/upload-project/UploadProjectModal";
-import { createProject } from "../../lib/projects";
+import { createProject } from "../../../lib/projects";
 
 async function fetchMajors() {
   const response = await fetch(
